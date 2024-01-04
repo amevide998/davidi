@@ -1,7 +1,6 @@
 "use client";
 import React, { Fragment, useContext, useEffect, useState } from "react";
 import Link from "next/link";
-import { DiTechcrunch } from "react-icons/di";
 import { BsFillLightningChargeFill } from "react-icons/bs";
 import { TbBulbFilled } from "react-icons/tb";
 
@@ -49,7 +48,7 @@ const Navbar = () => {
       >
         {/* Name Logo */}
         <p className='text-gray-400 flex'>
-          <span className='text-lg font-bold'>SHIV</span> <DiTechcrunch />
+          <span className='text-lg font-bold'>Davidi</span>
         </p>
         <div className='h-full flex gap-4'>
           {/* Navbar Links */}

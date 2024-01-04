@@ -1,5 +1,4 @@
 import React from "react";
-import { DiTechcrunch } from "react-icons/di";
 import { BsFillLightningChargeFill } from "react-icons/bs";
 import { TbBulbFilled } from "react-icons/tb";
 import { GiHamburgerMenu } from "react-icons/gi";
@@ -22,7 +21,7 @@ const NavbarMobile = ({ setShowMenu, setThemeFun, theme, showMenu, top }) => {
 
         {/* Name Logo */}
         <p className='text-gray-400 flex'>
-          <span className='text-lg font-bold'>SHIV</span> <DiTechcrunch />
+          <span className='text-lg font-bold'>Davidi</span>
         </p>
       </div>
 
