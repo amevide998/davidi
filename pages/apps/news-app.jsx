@@ -6,11 +6,11 @@ import { AiOutlineMenu } from "react-icons/ai";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 
 import Theme from "@/utils/Theme";
-import { savedArticles } from "@/constants/NewsData";
+import { NewsData } from "@/constants/NewsData";
 import BackTo from "@/components/buttons/BackTo";
 
 const NewsApp = () => {
-  const [articles, setArticles] = useState(savedArticles);
+  const [articles, setArticles] = useState(NewsData);
   const [category, setCategory] = useState("general");
   const [country, setCountry] = useState("in");
   const [language, setLanguage] = useState("en");
@@ -24,7 +24,7 @@ const NewsApp = () => {
       .get("/api/news?category=general&lang=en&country=in&max=10")
       .then((res) => {
         if (!res.data.success) {
-          setArticles(savedArticles);
+          setArticles(NewsData);
           setLoading(false);
           alert("Not Found1 : Showing Old News");
         } else {
@@ -38,7 +38,7 @@ const NewsApp = () => {
       .catch((err) => {
         alert(err?.response?.data?.message || err.message || err);
         alert("Not Found2 : Showing Old News");
-        setArticles(savedArticles);
+        setArticles(NewsData);
         setLoading(false);
       });
   }, []);
@@ -59,7 +59,7 @@ const NewsApp = () => {
         }
       })
       .catch((err) => {
-        setArticles(savedArticles);
+        setArticles(NewsData);
         alert("Not Found : Showing Old News");
         setLoading(false);
       });
